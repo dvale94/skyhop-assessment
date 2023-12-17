@@ -5,5 +5,5 @@ export default function Header() {
         <p className='text-3xl text-blue-900 font-bold'>Document Upload</p>
       </div>
     </div>
-  )
+  );
 };
