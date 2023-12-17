@@ -9,16 +9,22 @@ import { Form, Formik } from 'formik';
 
 export default function DocumentUpload() {
   return (
-    <div className='max-w-[2000px] min-w-[1000px]'>
+    <div className='flex flex-col justify-center w-[1100px]'>
       <Formik 
-        initialValues={{importInput: 'Import', otherInput: 'Other'}}
-        onSubmit={() => console.log('submitted')}
+        initialValues={{
+          centersClients: [{center: 1, client: ''}, {center: 2, client: ''}, {center: 3, client: ''}, {center: 4, client: ''}],
+          importName: '',
+          multipleClients: 'yes',
+          socialDistancing: 'yes',
+          toleranceWindow: 'on'
+        }}
+        onSubmit={(values) => console.log(values)}
         onReset={() => console.log('reseted')}
       >
         <Form className='flex flex-col p-16 gap-12 border'>
           <Header />
 
-          <div className='flex md:flex-row flex-col'>
+          <div className='flex md:flex-row flex-col gap-12'>
             <ImportSection />
             <OtherSection />
           </div>
@@ -27,5 +33,5 @@ export default function DocumentUpload() {
         </Form>
       </Formik>
     </div>
-  )
+  );
 };

@@ -29,7 +29,7 @@ export default function CentersClientField() {
       />
 
       {values.centersClients.map((item, index) => (
-        <div className='flex items-center justify-between' key={`center-field-${item.center}`}>
+        <div className='flex items-center gap-12' key={`center-field-${item.center}`}>
           <span className='text-xs'>Testing Center {item.center}</span>
           <div className='flex gap-3'>
             <DocumentDropdownField defaultValue='Select Client' name={`centersClients[${index}].client`} options={[{text: 'Client 1', value: 'client1'},{text: 'Client 2', value: 'client2'}]}/>
