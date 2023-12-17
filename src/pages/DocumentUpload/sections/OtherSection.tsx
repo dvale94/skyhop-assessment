@@ -1,5 +1,6 @@
 import InputSection from '@/src/components/InputSection';
 import DualRadioField from '@/src/components/DualRadioField';
+import CentersClientField from '@/src/components/CentersClientField';
 
 export default function OtherSection() {
   return (
@@ -19,13 +20,7 @@ export default function OtherSection() {
       </InputSection>
 
       <InputSection title='Client:'>
-        <DualRadioField
-          name='multipleClients'
-          option1Text='Single'
-          option1Value='no'
-          option2Text='Multiple'
-          option2Value='yes'
-        />
+        <CentersClientField />
       </InputSection>
     </div>
   );
