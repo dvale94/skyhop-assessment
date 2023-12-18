@@ -7,8 +7,12 @@ export default function Footer() {
         Data in the import file is correct. Please press continue to import.
       </p>
       <div className='flex flex-col md:flex-row md:gap-6 gap-3'>
-        <Button text='Continue Import' type='submit'/>
-        <Button primary={false} text='Cancel' type='reset'/>
+        <div className='flex w-[240px] h-[45px]'>
+          <Button text='Continue Import' type='submit'/>
+        </div>
+        <div className='flex w-[240px] h-[45px]'>
+          <Button primary={false} text='Cancel' type='reset'/>
+        </div>
       </div>
     </div>
   );
