@@ -4,6 +4,7 @@ import { useFormikContext } from 'formik';
 import Button from '@/src/components/Button';
 import { Field } from 'formik';
 import Image from 'next/image';
+import { FormFieldValues } from '@/src/pages/DocumentUpload/DocumentUpload';
 
 function formatFileSize(bytes: number) {
   if(bytes == 0) return '0 Bytes';
@@ -14,12 +15,12 @@ function formatFileSize(bytes: number) {
 }
 
 export default function DocumentImportField() {
-  const [file, setFile] = useState(null as unknown as File);
-  const { values } = useFormikContext();
-  const inputRef = useRef(null);
+  const [file, setFile] = useState<File | null>(null);
+  const { values } = useFormikContext<FormFieldValues>();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (values.file) {
+    if (values.file && !!inputRef.current?.files) {
       setFile(inputRef.current.files[0])
     }
     else {

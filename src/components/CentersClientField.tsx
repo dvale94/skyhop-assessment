@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useFormikContext } from 'formik';
+import { FormFieldValues } from '@/src/pages/DocumentUpload/DocumentUpload';
 
 import Image from 'next/image';
 import DualRadioField from '@/src/components/DualRadioField';
 import DocumentDropdownField from '@/src/components/DocumentDropdownField';
 
 export default function CentersClientField() {
-  const { values, setFieldValue } = useFormikContext();
+  const { values, setFieldValue } = useFormikContext<FormFieldValues>();
 
   useEffect(() => {
     if (values.multipleClients === 'yes') {
