@@ -2,6 +2,7 @@ import DocumentImportField from '@/src/components/DocumentImportField';
 import DocumentDropdownField from '@/src/components/DocumentDropdownField';
 import InputSection from '@/src/components/InputSection';
 import ToggleSwitch from '@/src/components/ToggleSwitch';
+import Image from 'next/image';
 
 export default function ImportSection() {
   return (
@@ -18,7 +19,13 @@ export default function ImportSection() {
       </InputSection>
       
       <InputSection title='Tolerance Window:'>
-        <ToggleSwitch />
+        <div className='flex gap-4'>
+          <ToggleSwitch />
+          <div className='flex items-center border-l gap-2 pl-4'>
+            <Image src='/clock.svg' alt='Clock' width={20} height={20} />
+            <p className='text-xs text-gray-500'>Select Tolerance Level</p>
+          </div>
+        </div>
       </InputSection>
     </div>
   );

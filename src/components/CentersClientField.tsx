@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
+import { useFormikContext } from 'formik';
+
+import Image from 'next/image';
 import DualRadioField from '@/src/components/DualRadioField';
 import DocumentDropdownField from '@/src/components/DocumentDropdownField';
-import { useFormikContext } from 'formik';
-import { useEffect } from 'react';
 
 export default function CentersClientField() {
   const { values, setFieldValue } = useFormikContext();
@@ -33,6 +35,7 @@ export default function CentersClientField() {
           <span className='text-xs'>Testing Center {item.center}</span>
           <div className='flex gap-3'>
             <DocumentDropdownField defaultValue='Select Client' name={`centersClients[${index}].client`} options={[{text: 'Client 1', value: 'client1'},{text: 'Client 2', value: 'client2'}]}/>
+            <Image src='/clock.svg' alt='Clock' width={20} height={20} />
           </div>
         </div>
       ))}
