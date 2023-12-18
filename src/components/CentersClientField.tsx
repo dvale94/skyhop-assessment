@@ -34,7 +34,7 @@ export default function CentersClientField() {
         <div className='flex items-center gap-12' key={`center-field-${item.center}`}>
           <span className='text-xs'>Testing Center {item.center}</span>
           <div className='flex gap-3'>
-            <DocumentDropdownField defaultValue='Select Client' name={`centersClients[${index}].client`} options={[{text: 'Client 1', value: 'client1'},{text: 'Client 2', value: 'client2'}]}/>
+            <DocumentDropdownField defaultValue='Select Client' name={`centersClients[${index}].client`} options={[{text: 'Client 1', value: 'client1'},{text: 'Client 2', value: 'client2'}, {text: 'Client 3', value: 'client3'},{text: 'Client 4', value: 'client4'}]}/>
             <Image src='/clock.svg' alt='Clock' width={20} height={20} />
           </div>
         </div>
