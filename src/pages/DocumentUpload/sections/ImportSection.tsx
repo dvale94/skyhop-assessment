@@ -6,17 +6,20 @@ import Image from 'next/image';
 
 export default function ImportSection() {
   return (
-    <div className='flex flex-col gap-10 flex-[50%]'>
+    <div className='flex flex-col flex-[50%]'>
       {/* TODO - refactor dropdown */}
       <DocumentDropdownField defaultValue='Select Import Name:' name='importName' options={[{text: 'Name Example 1', value: 'nameExample1'},{text: 'Name Example 2', value: 'nameExample2'}]}/>
-      
+      <div className=' border-b-2 w-1/2 pb-5' />
+
       <InputSection title="Select a manifest that you'd like to import">
         <DocumentImportField />
       </InputSection>
       
-      <InputSection title='Elapse Data Checking:'>
-        <p className='text-sm text-green-500'>No Elapse Dates!</p>
-      </InputSection>
+      <div className='border-t-2 border-b-2 w-1/2'>
+        <InputSection title='Elapse Data Checking:'>
+          <p className='text-sm text-green-500'>No Elapse Dates!</p>
+        </InputSection>
+      </div>
       
       <InputSection title='Tolerance Window:'>
         <div className='flex gap-4'>

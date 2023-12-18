@@ -21,7 +21,7 @@ export default function DocumentUpload() {
         onSubmit={(values) => console.log(values)}
         onReset={() => console.log('reseted')}
       >
-        <Form className='flex flex-col p-16 gap-12 border'>
+        <Form className='flex flex-col p-16 gap-12'>
           <Header />
 
           <div className='flex md:flex-row flex-col gap-12'>

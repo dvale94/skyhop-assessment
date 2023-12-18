@@ -13,7 +13,7 @@ export default function DocumentImportField() {
           <Button text='Upload Manifest'/>
         </div>
       </div>
-      <div className='flex flex-row p-4 border-t-2 border-b-2 gap-4'>
+      <div className='flex flex-row p-2 border-t-2 border-b-2 gap-4'>
         <Image src='/fileUpload.svg' alt='File Upload Icon' width={40} height={40} />
         <div className='flex flex-row w-full justify-between'>
           <p className='text-xs text-gray-400'>File-test-1023.csv</p>
