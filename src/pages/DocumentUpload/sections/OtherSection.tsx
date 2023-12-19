@@ -1,3 +1,5 @@
+'use client';
+
 import InputSection from '@/src/components/InputSection';
 import DualRadioField from '@/src/components/DualRadioField';
 import CentersClientField from '@/src/components/CentersClientField';

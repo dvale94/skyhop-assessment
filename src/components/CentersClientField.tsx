@@ -19,7 +19,7 @@ export default function CentersClientField() {
       setFieldValue('centersClients', [{center: 1, client: ''}])
     }
     
-  }, [values.multipleClients]);
+  }, [values.multipleClients, setFieldValue]);
 
   return (
     <div className='flex flex-col gap-3'>

@@ -1,3 +1,5 @@
+'use client';
+
 import DocumentImportField from '@/src/components/DocumentImportField';
 import DocumentDropdownField from '@/src/components/DocumentDropdownField';
 import InputSection from '@/src/components/InputSection';
