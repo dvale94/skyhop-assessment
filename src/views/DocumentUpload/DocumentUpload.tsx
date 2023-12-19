@@ -1,9 +1,7 @@
-'use client';
-
-import Header from '@/src/pages/DocumentUpload/sections/Header';
-import ImportSection from '@/src/pages/DocumentUpload/sections/ImportSection';
-import OtherSection from '@/src/pages/DocumentUpload/sections/OtherSection';
-import Footer from '@/src/pages/DocumentUpload/sections/Footer';
+import Header from '@/src/views/DocumentUpload/sections/Header';
+import ImportSection from '@/src/views/DocumentUpload/sections/ImportSection';
+import OtherSection from '@/src/views/DocumentUpload/sections/OtherSection';
+import Footer from '@/src/views/DocumentUpload/sections/Footer';
 
 import { Form, Formik } from 'formik';
 

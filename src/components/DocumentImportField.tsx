@@ -1,10 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
-import { useFormikContext } from 'formik';
+import { Field, useFormikContext } from 'formik';
 
 import Button from '@/src/components/Button';
-import { Field } from 'formik';
 import Image from 'next/image';
-import { FormFieldValues } from '@/src/pages/DocumentUpload/DocumentUpload';
+import { FormFieldValues } from '@/src/views/DocumentUpload/DocumentUpload';
 
 function formatFileSize(bytes: number) {
   if(bytes == 0) return '0 Bytes';

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useFormikContext } from 'formik';
-import { FormFieldValues } from '@/src/pages/DocumentUpload/DocumentUpload';
+import { FormFieldValues } from '@/src/views/DocumentUpload/DocumentUpload';
 
 import Image from 'next/image';
 import DualRadioField from '@/src/components/DualRadioField';

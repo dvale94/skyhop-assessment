@@ -1,4 +1,6 @@
-import DocumentUpload from '@/src/pages/DocumentUpload/DocumentUpload';
+'use client';
+
+import DocumentUpload from '@/src/views/DocumentUpload/DocumentUpload';
 
 export default function Home() {
   return (
