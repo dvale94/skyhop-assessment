@@ -1,8 +1,10 @@
-import DocumentUpload from '@/src/containers/DocumentUpload/DocumentUpload';
+'use client';
+
+import DocumentUpload from '@/src/views/DocumentUpload/DocumentUpload';
 
 export default function Home() {
   return (
-    <main>
+    <main className='flex justify-center'>
       <DocumentUpload />
     </main>
   )
