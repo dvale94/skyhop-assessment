@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
-import { Field, useFormikContext } from 'formik';
+import { useField, useFormikContext } from 'formik';
+import {useDropzone} from 'react-dropzone'
 
 import Button from '@/src/components/Button';
 import Image from 'next/image';
@@ -14,9 +15,13 @@ function formatFileSize(bytes: number) {
 }
 
 export default function DocumentImportField() {
-  const [file, setFile] = useState<File | null>(null);
+  const [ file, setFile ] = useState<File | null>(null);
   const { values } = useFormikContext<FormFieldValues>();
   const inputRef = useRef<HTMLInputElement>(null);
+  const [ field ] = useField('file');
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({
+    onDrop: (acceptedFiles) => setFile(acceptedFiles[0])
+  });
 
   useEffect(() => {
     if (values.file && !!inputRef.current?.files) {
@@ -31,12 +36,18 @@ export default function DocumentImportField() {
     <div className='flex flex-col gap-4'>
       <div className='flex flex-col items-center border rounded-lg p-4 gap-4'>
         <div
-          className='flex flex-col items-center justify-center h-[118px] w-full border-2 border-dashed rounded-lg gap-5 cursor-pointer'
-          onClick={() => inputRef.current?.click()}
+          {...getRootProps({
+            className: 'flex flex-col items-center justify-center h-[118px] w-full border-2 border-dashed rounded-lg gap-5 cursor-pointer',
+            onClick: () => inputRef.current?.click()
+          })}
         >
           <Image src='/file.svg' alt='File Icon' width={20} height={20} />
-          <p className='text-xs'>Drag & Drop Here Or <span className='text-blue-900 font-bold hover:underline'>Browse</span></p>
-          <Field type='file' name='file' className='hidden' accept=".csv" innerRef={inputRef}/>
+          {!isDragActive ? (
+            <p className='text-xs'>Drag & Drop Here Or <span className='text-blue-900 font-bold hover:underline'>Browse</span></p>
+          ): (
+            <p className='text-xs'>Drop File</p>
+          )}
+          <input {...getInputProps({type:'file', className: 'hidden'})} ref={inputRef} {...field}/>
         </div>
         <div className='flex w-[200px] h-[30px]'>
           <Button text='Upload Manifest'/>
