@@ -25,18 +25,18 @@ export default function DocumentImportField() {
     else {
       setFile(null)
     }
-  }, [values.file])
+  }, [values.file]);
 
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex flex-col items-center border rounded-lg p-4 gap-4'>
         <div
           className='flex flex-col items-center justify-center h-[118px] w-full border-2 border-dashed rounded-lg gap-5 cursor-pointer'
-          onClick={() => document.getElementById('fileUpload')?.click()}
+          onClick={() => inputRef.current?.click()}
         >
           <Image src='/file.svg' alt='File Icon' width={20} height={20} />
-          <p className='text-xs'>Drag & Drop Here Or <span className='text-blue-900 font-bold'>Browse</span></p>
-          <Field type='file' name='file' id='fileUpload' className='hidden' accept=".csv" innerRef={inputRef}/>
+          <p className='text-xs'>Drag & Drop Here Or <span className='text-blue-900 font-bold hover:underline'>Browse</span></p>
+          <Field type='file' name='file' className='hidden' accept=".csv" innerRef={inputRef}/>
         </div>
         <div className='flex w-[200px] h-[30px]'>
           <Button text='Upload Manifest'/>
