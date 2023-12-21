@@ -7,7 +7,6 @@ import Image from 'next/image';
 export default function ImportSection() {
   return (
     <div className='flex flex-col flex-[50%]'>
-      {/* TODO - refactor dropdown */}
       <DocumentDropdownField
         defaultValue='Select Import Name:'
         name='importName'
