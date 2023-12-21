@@ -8,12 +8,12 @@ export default function Footer() {
       </p>
       <div className='flex flex-col md:flex-row md:gap-6 gap-3'>
         <div className='flex w-[240px] h-[45px]'>
-          <Button text='Continue Import' type='submit'/>
+          <Button text='Continue Import' type='submit' />
         </div>
         <div className='flex w-[240px] h-[45px]'>
-          <Button primary={false} text='Cancel' type='reset'/>
+          <Button primary={false} text='Cancel' type='reset' />
         </div>
       </div>
     </div>
   );
-};
+}

@@ -26,4 +26,4 @@ export default function OtherSection() {
       </InputSection>
     </div>
   );
-};
+}

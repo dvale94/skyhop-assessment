@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 type InputSectionProps = {
   children: ReactNode;
@@ -12,4 +12,4 @@ export default function InputSection({ children, title }: InputSectionProps) {
       {children}
     </div>
   );
-};
+}

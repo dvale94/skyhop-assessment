@@ -15,7 +15,7 @@ export type FormFieldValues = {
     center: number;
     client: string;
   }[];
-}
+};
 
 const initialValues: FormFieldValues = {
   importName: '',
@@ -23,13 +23,18 @@ const initialValues: FormFieldValues = {
   toleranceWindow: 'on',
   socialDistancing: 'yes',
   multipleClients: 'yes',
-  centersClients: [{center: 1, client: ''}, {center: 2, client: ''}, {center: 3, client: ''}, {center: 4, client: ''}]
-}
+  centersClients: [
+    { center: 1, client: '' },
+    { center: 2, client: '' },
+    { center: 3, client: '' },
+    { center: 4, client: '' },
+  ],
+};
 
 export default function DocumentUpload() {
   return (
     <div className='flex flex-col justify-center w-[1100px]'>
-      <Formik 
+      <Formik
         initialValues={initialValues}
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
         onReset={() => alert('clearing form...')}
@@ -47,4 +52,4 @@ export default function DocumentUpload() {
       </Formik>
     </div>
   );
-};
+}
